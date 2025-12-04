@@ -327,7 +327,7 @@ const Header = () => {
             delay: 0.7,
             ease: [0.25, 0.46, 0.45, 0.94]
           }}
-          className="!text-[0.8em] hidden 2xl:block mt-4 sm:mt-8 md:mt-[10em] text-white leading-relaxed max-w-lg mb-4 md:mb-8"
+          className="!text-[0.8em] md:!text-[1.2em] hidden 2xl:block mt-4 sm:mt-8 md:mt-[10em] text-white leading-relaxed max-w-lg mb-4 md:mb-8"
         >
           Where every property tells a story, and every transaction begins a new chapter in your real estate journey.
         </motion.p>

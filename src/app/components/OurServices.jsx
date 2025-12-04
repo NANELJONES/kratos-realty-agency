@@ -9,13 +9,13 @@ const services = [
   {
     id: 1,
     name: "Luxury Real Estates",
-    description: "Discover exclusive luxury properties that match your refined taste. From premium residential estates to high-end commercial spaces, we curate a collection of exceptional properties that define luxury living. Our expert team ensures every detail meets the highest standards of quality and sophistication.",
-    image: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.1.0"
+    description: "Discover exclusive luxury properties that match your refined taste. From premium residential estates to high-end commercial spaces, we curate a collection of exceptional properties that define luxury living.",
+    image: "https://images.unsplash.com/photo-1522517779552-6cf4c1f31ee3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: 2,
     name: "Property Management",
-    description: "Comprehensive property management services designed to maximize your investment returns. We handle everything from tenant relations and maintenance to financial reporting and legal compliance. Our proactive approach ensures your properties are well-maintained and profitable year-round.",
+    description: "Comprehensive property management services designed to maximize your investment returns. We handle everything from tenant relations and maintenance to financial reporting and legal compliance. ",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.1.0"
   },
   {
@@ -59,7 +59,7 @@ const OurServices = () => {
             transition={{ duration: 0.8 }}
             className="w-full lg:w-1/3"
           >
-            <div className="relative w-full h-64 md:h-80 lg:h-[500px]">
+            <div className="relative w-full sticky top-0 md:block hidden h-64 md:h-80 lg:h-[500px]">
               <Image
                 src={services.find(s => s.id === activeService)?.image || services[0].image}
                 alt={services.find(s => s.id === activeService)?.name || services[0].name}

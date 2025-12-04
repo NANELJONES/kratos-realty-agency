@@ -17,7 +17,7 @@ export default function Home() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'linear-gradient(to bottom, var(--primary-color) 0%, transparent 100%)'
+          background: 'linear-gradient(to bottom, rgba(25, 27, 50, 0.5) 0%, transparent 100%)'
         }}
       />
 
