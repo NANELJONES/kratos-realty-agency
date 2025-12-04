@@ -1,0 +1,351 @@
+this is the sample query of the hygrpah 
+query MyQuery {
+  propertyListingsConnection {
+    edges {
+      node {
+        coverImage {
+          url
+        }
+        description {
+          raw
+        }
+        disclaimer
+        gallery {
+          url
+        }
+        isFeatured
+        location {
+          city
+          country
+          fullAddress
+          regionState
+          town
+          propertyLocation {
+            latitude
+            longitude
+          }
+        }
+        pricing {
+          ... on RentPricing {
+            id
+            minimumDuration
+            negotiable
+            price
+            priceDuration
+            currency
+          }
+          ... on SalePricing {
+            id
+            price
+            currency
+          }
+        }
+        propertySize {
+          size
+          sizeVariation
+          unit
+        }
+        propertySpecification {
+          ... on HousesAndApartment {
+            id
+            furnishing
+            bedroom
+            bathroom
+            kitchen
+            housesAndApartmentSubCategory
+          }
+          ... on Land {
+            soilType
+            stage
+            topography
+            documentAvailability
+            landSubCategory
+          }
+          ... on Office {
+            id
+            numberOfRooms
+            receptionArea
+            furnishing
+            totalFloorArea
+            washrooms
+            officesSubCategory
+          }
+        }
+        propertyStatus
+        propertyType
+        purpose
+        title
+        views
+        shares
+      }
+    }
+  }
+}
+
+
+
+this is the sample data 
+{
+  "data": {
+    "propertyListingsConnection": {
+      "edges": [
+        {
+          "node": {
+            "coverImage": {
+              "url": "https://eu-west-2.graphassets.com/cmht4llc14mit07le5tcd8ma2/cmipe0kjvf3s007ldnbfx3ogw"
+            },
+            "description": {
+              "raw": {
+                "children": [
+                  {
+                    "type": "heading-two",
+                    "children": [
+                      {
+                        "text": "What is Lorem Ipsum?"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "bold": true,
+                        "text": "Lorem Ipsum"
+                      },
+                      {
+                        "text": " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "heading-two",
+                    "children": [
+                      {
+                        "text": "Why do we use it?"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "disclaimer": "None yet",
+            "gallery": [
+              {
+                "url": "https://eu-west-2.graphassets.com/cmht4llc14mit07le5tcd8ma2/cmipe00g2ex7m07ml638hqntm"
+              },
+              {
+                "url": "https://eu-west-2.graphassets.com/cmht4llc14mit07le5tcd8ma2/cmipe0kjvf3s007ldnbfx3ogw"
+              }
+            ],
+            "isFeatured": true,
+            "location": {
+              "city": "Madina",
+              "country": "Ghana",
+              "fullAddress": null,
+              "regionState": "Greater Accra",
+              "town": "",
+              "propertyLocation": {
+                "latitude": 5.6731273,
+                "longitude": -0.1663851
+              }
+            },
+            "pricing": {
+              "id": "cmipe1319euvj07lc60809lvj",
+              "minimumDuration": "2 years",
+              "negotiable": true,
+              "price": 2000,
+              "priceDuration": "month",
+              "currency": "ghs"
+            },
+            "propertySize": {
+              "size": 200,
+              "sizeVariation": "none",
+              "unit": "acres"
+            },
+            "propertySpecification": {
+              "id": "cmipe131aeuvl07lcs7uqxf5r",
+              "furnishing": "furnished",
+              "bedroom": 2,
+              "bathroom": 2,
+              "kitchen": 1,
+              "housesAndApartmentSubCategory": "compoundHouse"
+            },
+            "propertyStatus": "available",
+            "propertyType": "housesAndApartments",
+            "purpose": "rent",
+            "title": "2 bedroom apartment at east legon",
+            "views": null,
+            "shares": null
+          }
+        },
+        {
+          "node": {
+            "coverImage": {
+              "url": "https://eu-west-2.graphassets.com/cmht4llc14mit07le5tcd8ma2/cmipfa49cfeds07mlcgw2pfad"
+            },
+            "description": {
+              "raw": {
+                "children": [
+                  {
+                    "type": "heading-two",
+                    "children": [
+                      {
+                        "text": "What is Lorem Ipsum?"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "bold": true,
+                        "text": "Lorem Ipsum"
+                      },
+                      {
+                        "text": " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                      }
+                    ]
+                  },
+                  {
+                    "type": "heading-two",
+                    "children": [
+                      {
+                        "text": "Why do we use it?"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "disclaimer": null,
+            "gallery": [
+              {
+                "url": "https://eu-west-2.graphassets.com/cmht4llc14mit07le5tcd8ma2/cmipe0kjvf3s007ldnbfx3ogw"
+              },
+              {
+                "url": "https://eu-west-2.graphassets.com/cmht4llc14mit07le5tcd8ma2/cmipe00g2ex7m07ml638hqntm"
+              },
+              {
+                "url": "https://eu-west-2.graphassets.com/cmht4llc14mit07le5tcd8ma2/cmipfa49cfeds07mlcgw2pfad"
+              }
+            ],
+            "isFeatured": true,
+            "location": {
+              "city": "Pokuase",
+              "country": "Ghana",
+              "fullAddress": null,
+              "regionState": "Greater Accra",
+              "town": null,
+              "propertyLocation": {
+                "latitude": 24.770674,
+                "longitude": 92.1964221
+              }
+            },
+            "pricing": {
+              "id": "cmipfakkefejq07mlu7m2hkk4",
+              "price": 600000,
+              "currency": "usd"
+            },
+            "propertySize": {
+              "size": 300,
+              "sizeVariation": "square2",
+              "unit": "feet"
+            },
+            "propertySpecification": {
+              "soilType": "mixed",
+              "stage": "DRAFT",
+              "topography": "flat",
+              "documentAvailability": true,
+              "landSubCategory": "industrialLand"
+            },
+            "propertyStatus": "available",
+            "propertyType": "lands",
+            "purpose": "sale",
+            "title": "Land At Pokuase",
+            "views": null,
+            "shares": null
+          }
+        },
+        {
+          "node": {
+            "coverImage": {
+              "url": "https://eu-west-2.graphassets.com/cmht4llc14mit07le5tcd8ma2/cmipe0kjvf3s007ldnbfx3ogw"
+            },
+            "description": {
+              "raw": {
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "disclaimer": null,
+            "gallery": [],
+            "isFeatured": true,
+            "location": {
+              "city": "East Airport",
+              "country": "Ghana",
+              "fullAddress": null,
+              "regionState": "Greater Accra",
+              "town": "Obeibia",
+              "propertyLocation": {
+                "latitude": 5.559284600000001,
+                "longitude": -0.1974306
+              }
+            },
+            "pricing": {
+              "id": "cmipfdno1ff6w07mly7k24say",
+              "minimumDuration": "1 year",
+              "negotiable": true,
+              "price": 5000,
+              "priceDuration": "month",
+              "currency": "ghs"
+            },
+            "propertySize": {
+              "size": 100,
+              "sizeVariation": "square2",
+              "unit": "feet"
+            },
+            "propertySpecification": {
+              "id": "cmipfdno1ff6y07mljxosr6a4",
+              "numberOfRooms": 3,
+              "receptionArea": true,
+              "furnishing": "furnished",
+              "totalFloorArea": 200,
+              "washrooms": 1,
+              "officesSubCategory": []
+            },
+            "propertyStatus": "available",
+            "propertyType": "offices",
+            "purpose": "rent",
+            "title": "Office at East Airport",
+            "views": null,
+            "shares": null
+          }
+        }
+      ]
+    }
+  }
+}

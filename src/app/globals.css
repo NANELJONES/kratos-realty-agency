@@ -1,0 +1,213 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary-color: #191B32;
+  --secondary-color: #E6AD3A;
+  --tertiary-color: #1825BA;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary-color);
+  --color-secondary: var(--secondary-color);
+  --color-tertiary: var(--tertiary-color);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: #191B32;
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+
+
+.huge {
+  @apply text-white leading-[0.5em] text-[2.5em] lg:text-[5em];
+}
+
+.clip {
+  clip-path: polygon(15% 0, 100% 0, 100% 86%, 75% 100%, 0 100%, 0 21%);
+}
+
+/* Responsive Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+
+
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.75rem;
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+h5 {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+
+@layer layout {
+  .layout {
+    @apply mx-auto w-full max-w-[1200px] pt-[2.5rem] pb-[2.5rem];
+  }
+}
+
+/* Button Styles */
+@layer components {
+  .primary_button {
+    @apply bg-primary/40  text-[0.8em] backdrop-blur-sm text-white px-6 py-5 rounded-full  transition-all duration-300 border-none cursor-pointer inline-flex items-center justify-center gap-2;
+  }
+
+  .primary_button:hover {
+    @apply bg-primary/80 -translate-y-0.5;
+    box-shadow: 0 4px 12px rgba(25, 27, 50, 0.4);
+  }
+
+  .primary_button:active {
+    @apply translate-y-0;
+  }
+
+  .secondary_button {
+    @apply bg-gradient-to-r text-[0.8em] from-secondary/60 to-secondary/20 border backdrop-blur-sm text-white px-6 py-5 rounded-full transition-all duration-300 border-none cursor-pointer inline-flex items-center justify-center gap-2;
+  }
+
+  .secondary_button:hover {
+    @apply bg-[#d19a2e] -translate-y-0.5;
+    box-shadow: 0 4px 12px rgba(230, 173, 58, 0.4);
+  }
+
+  .secondary_button:active {
+    @apply translate-y-0;
+  }
+
+  .tertiary_button {
+    @apply bg-tertiary text-[0.8em] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 border-none cursor-pointer inline-flex items-center justify-center gap-2;
+  }
+
+  .tertiary_button:hover {
+    @apply bg-[#141f9a] -translate-y-0.5;
+    box-shadow: 0 4px 12px rgba(24, 37, 186, 0.4);
+  }
+
+  .tertiary_button:active {
+    @apply translate-y-0;
+  }
+
+  .huge_text {
+    @apply text-white text-[2.5em] lg:text-[5em];
+  }
+
+  /* Select dropdown options styling */
+  select option {
+    background-color: #191B32 !important;
+    color: white !important;
+  }
+  
+  select:focus option:checked {
+    background-color: #E6AD3A !important;
+    color: white !important;
+  }
+  
+  select option:hover {
+    background-color: #E6AD3A !important;
+  }
+
+  /* Swiper Custom Styles */
+  .main-swiper {
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .main-swiper .swiper-button-next,
+  .main-swiper .swiper-button-prev {
+    color: #E6AD3A !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+
+  .main-swiper .swiper-button-next:after,
+  .main-swiper .swiper-button-prev:after {
+    font-size: 14px !important;
+    font-weight: bold;
+  }
+
+  .main-swiper .swiper-button-next:hover,
+  .main-swiper .swiper-button-prev:hover {
+    background: rgba(0, 0, 0, 0.8) !important;
+    color: #E6AD3A !important;
+  }
+
+  .main-swiper .swiper-button-next.swiper-button-disabled,
+  .main-swiper .swiper-button-prev.swiper-button-disabled {
+    opacity: 0.35;
+  }
+
+  .thumbs-swiper {
+    margin-top: 1rem;
+  }
+
+  .thumbs-swiper .swiper-slide {
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+
+  .thumbs-swiper .swiper-slide-thumb-active {
+    opacity: 1;
+    border: 2px solid #E6AD3A;
+  }
+}
